@@ -8,7 +8,10 @@ export default {
   theme: {
     extend: {},
   },
-  plugins: [],
+  plugins: [
+    // ... Plugin para formularios de tailwind
+    // ... require('@tailwindcss/forms'),
+  ],
 }
 
 /* Para importar los estilos a las vistas usar el siguiente código 
