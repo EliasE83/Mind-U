@@ -82,7 +82,7 @@
 /* Estilos botón color */
 
 .wrapper {
-    position: fixed;
+    position: absolute;
     
     transform: translate(-50%, -50%);
     width: 60px;
@@ -91,8 +91,8 @@
     --ch-black: #141414;
     --eer-black: #1b1b1b;
     --night-rider: #2e2e2e;
-    --white: #f3f3f3;
-    --af-white: #CB6DF0;
+    --white: #CB6DF0;
+    --af-white: #f3f3f3;
     --ch-white: #e1e1e1;
   }
   
@@ -128,6 +128,7 @@
   }
   
   .circle:active {
+    background-color: #f3f3f3;
     transform: scale(0.9);
     box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.3);
   }

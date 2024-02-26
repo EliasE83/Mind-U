@@ -93,8 +93,7 @@
             <input type="checkbox" id="toogle" class="hidden-trigger">
 
             <label for="toogle" class="circle">
-              {{-- Este es el simbolo de más --}}
-              
+
             </label>
 
             <div class="subs">
