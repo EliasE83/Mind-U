@@ -7,24 +7,26 @@
 .input {
     display: flex;
     flex-direction: column;
-    width: 200px;
-    background-color: #0d1117;
+    width: 320px;
+    background-color: #CB6DF0;
     justify-content: center;
     border-radius: 10px;
     transition: 1s;
     padding: 10px;
     overflow: hidden;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5); /* Añade una sombra */
+
   }
   
   .value {
-    font-size: 15px;
+    font-size: 24px;
     background-color: transparent;
     border: none;
     padding: 10px;
-    color: white;
+    color: black;
     display: flex;
     position: relative;
-    gap: 5px;
+    gap: 15px;
     cursor: pointer;
     border-radius: 10px;
     transition: 1s;
@@ -35,13 +37,13 @@
   .value:focus {
     display: flex;
     box-sizing: border-box;
-    border: 2px solid #1a1f24;
-    color: #637185;
+    border: 2px solid #ffffff;
+    color: #ffffff;
   }
   
   .value:focus,
   .value:active {
-    background-color: #1a1f24;
+    background-color: #B532E9;
     outline: none;
     margin-left: 17px;
   }
@@ -53,7 +55,7 @@
     left: -15px;
     width: 5px;
     height: 80%;
-    background-color: #2f81f7;
+    background-color: #B532E9;
     border-radius: 5px;
     opacity: 0;
     transition: 1s;
@@ -65,7 +67,8 @@
   }
   
   .value svg {
-    width: 20px;
+    width: 30px;
+    height: 30px;
   }
   
   .input:hover > :not(.value:hover) {
@@ -80,8 +83,7 @@
 
 .wrapper {
     position: absolute;
-    top: 50%;
-    left: 50%;
+    
     transform: translate(-50%, -50%);
     width: 60px;
     height: 60px;
@@ -89,7 +91,7 @@
     --ch-black: #141414;
     --eer-black: #1b1b1b;
     --night-rider: #2e2e2e;
-    --white: #ffffff;
+    --white: #CB6DF0;
     --af-white: #f3f3f3;
     --ch-white: #e1e1e1;
   }
@@ -126,6 +128,7 @@
   }
   
   .circle:active {
+    background-color: #f3f3f3;
     transform: scale(0.9);
     box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.3);
   }
@@ -164,8 +167,8 @@
     opacity: 0;
     padding: 0;
     margin: 0;
-    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
     border: none;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
   }
   
   .sub-circle label {
