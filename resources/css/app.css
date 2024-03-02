@@ -7,7 +7,7 @@
 .input {
     display: flex;
     flex-direction: column;
-    width: 320px;
+    width: 300px;
     background-color: #CB6DF0;
     justify-content: center;
     border-radius: 10px;
@@ -212,8 +212,8 @@
   .hidden-trigger:checked ~ .circle {
     transform: scale(0.9);
     cursor: pointer;
-    background-color: var(--white);
-    box-shadow: 0 8px 15px 0 rgba(0, 0, 0, 0.1);
+    background-color: var(--af-white);
+    box-shadow: 0 8px 15px 0 rgba(0, 0, 0, 0.3);
   }
   
   .hidden-trigger:checked ~ .circle .svg {
