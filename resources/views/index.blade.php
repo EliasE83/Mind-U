@@ -40,37 +40,37 @@
                 </button>
 
                 <button class="sub-circle" onclick="cambiarColor('#FFA500')">
-                  <input value="1" name="sub-circle" type="radio" id="sub" class="hidden-sub-trigger">
+                  <input value="#FFA500" name="sub-circle" type="radio" id="sub" class="hidden-sub-trigger">
                   <label for="sub2" style="background-color:#FFA500"></label>
                 </button>
 
                 <button class="sub-circle" onclick="cambiarColor('#FCF4D8')">
-                  <input value="1" name="sub-circle" type="radio" id="sub" class="hidden-sub-trigger">
+                  <input value="#FCF4D8" name="sub-circle" type="radio" id="sub" class="hidden-sub-trigger">
                   <label for="sub3" style="background-color:#FFFF00"></label>
                 </button>
 
                 <button class="sub-circle" onclick="cambiarColor('#00d6a0')">
-                  <input value="1" name="sub-circle" type="radio" id="sub" class="hidden-sub-trigger">
+                  <input value="#00d6a0" name="sub-circle" type="radio" id="sub" class="hidden-sub-trigger">
                   <label for="sub4" style="background-color:#00d6a0"></label>
                 </button>
 
                 <button class="sub-circle" onclick="cambiarColor('#00e5db')">
-                  <input value="1" name="sub-circle" type="radio" id="sub" class="hidden-sub-trigger">
+                  <input value="#00e5db" name="sub-circle" type="radio" id="sub" class="hidden-sub-trigger">
                   <label for="sub5" style="background-color:#00e5db"></label>
                 </button>
 
                 <button class="sub-circle" onclick="cambiarColor('#b37b92')">
-                  <input value="1" name="sub-circle" type="radio" id="sub" class="hidden-sub-trigger">
+                  <input value="#b37b92" name="sub-circle" type="radio" id="sub" class="hidden-sub-trigger">
                   <label for="sub6" style="background-color:#b37b92"></label>
                 </button>
 
                 <button class="sub-circle" onclick="cambiarColor('#EE82EE')">
-                  <input value="1" name="sub-circle" type="radio" id="sub" class="hidden-sub-trigger">
+                  <input value="#EE82EE" name="sub-circle" type="radio" id="sub" class="hidden-sub-trigger">
                   <label for="sub7" style="background-color:#EE82EE"></label>
                 </button>
 
                 <button class="sub-circle" onclick="cambiarColor('brown')">
-                  <input value="1" name="sub-circle" type="radio" id="sub" class="hidden-sub-trigger">
+                  <input value="brown" name="sub-circle" type="radio" id="sub" class="hidden-sub-trigger">
                   <label for="sub8" style="background-color:brown"></label>
                 </button>
               </div>
@@ -108,13 +108,6 @@
 
 </div>
 {{-- Fin de Div principal --}}
-
-<script>
-  function cambiarColor(color){
-    var colorFondo = color;
-    document.body.style.backgroundColor = colorFondo;
-  }
-</script>
 
 {{-- Footer --}}
 {{-- Fin Footer --}}

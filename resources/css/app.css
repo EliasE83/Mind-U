@@ -4,20 +4,50 @@
 
 /* Estilos del menú */
 
-.input {
-    display: flex;
+.menu-container {
+  position: relative;
+}
+
+.menu-btn {
+   
+    width: 120px;
+    height: 120px;
+    --black: #000000;
+    --ch-black: #141414;
+    --eer-black: #1b1b1b;
+    --night-rider: #2e2e2e;
+    --white: #CB6DF0;
+    --af-white: #f3f3f3;
+    --ch-white: #e1e1e1;
+    transition: transform 0.3s ease-in-out;
+}
+
+
+.menu {
+    display: none;
     flex-direction: column;
-    width: 300px;
+    width: 325px;
     background-color: #CB6DF0;
     justify-content: center;
     border-radius: 10px;
-    transition: 1s;
+    /* transition: 1s; */
     padding: 10px;
     overflow: hidden;
     box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5); /* Añade una sombra */
-
+    transition: transform 0.3s ease-in-out;
+    transform: translateY(-100%);   
   }
-  
+
+  .menu.active {
+    display: flex;
+    transform: translateY(0);
+  }
+
+  .menu-btn.disactive {
+    display: none;
+    transform: translateY(0);
+  }
+
   .value {
     font-size: 24px;
     background-color: transparent;
@@ -71,7 +101,7 @@
     height: 30px;
   }
   
-  .input:hover > :not(.value:hover) {
+  .menu:hover > :not(.value:hover) {
     transition: 300ms;
     filter: blur(1px);
     transform: scale(0.95, 0.95);
@@ -112,7 +142,7 @@
   }
   
   .circle {
-    display: block;
+    display: flex;
     position: relative;
     padding: 0;
     z-index: 98;
@@ -125,6 +155,28 @@
     background-color: var(--white);
     transition: 0.2s;
     text-align: center;
+  }
+
+  .circle2 {
+    display: flex;
+    position: relative;
+    padding: 0;
+    z-index: 98;
+    margin: 0 auto;
+    -webkit-box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.3);
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+    height: 120px;
+    width: 120px;
+    background-color: var(--white);
+    transition: 0.2s;
+    text-align: center;
+  }
+
+  .circle2:hover {
+    cursor: pointer;
+    background-color: var(--af-white);
+    box-shadow: 0 8px 15px 0 rgba(0, 0, 0, 0.3);
   }
   
   .circle:active {

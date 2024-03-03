@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Mind U</title>
     @vite('resources/css/app.css')
+    @vite('resources/js/app.js')
     <link rel="icon" href="{{asset('images/logo.png')}}">
 </head>
 <body class="h-full" style="background-color: #FCF4D8;">
