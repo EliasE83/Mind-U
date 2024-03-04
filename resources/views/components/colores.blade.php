@@ -56,7 +56,7 @@
     </div>
     {{-- Circulo principal --}}
     {{-- Chat Bot --}}
-    <div class="bg-white border border-slate-200 grid grid-cols-6 gap-2 rounded-xl p-2 text-sm my-auto">
+    <div class="bg-fondo border border-slate-200 grid grid-cols-6 gap-2 rounded-xl p-2 text-sm my-auto">
         <h1 class="text-center text-slate-200 text-xl font-bold col-span-6">Enviar Mensaje</h1>
         <textarea placeholder="Tus sentimientos..." class="bg-slate-100 text-slate-600 h-28 placeholder:text-slate-600 placeholder:opacity-50 border border-slate-200 col-span-6 resize-none outline-none rounded-lg p-2 duration-300 focus:border-slate-600"></textarea>
         <button class="fill-slate-600 col-span-1 flex justify-center items-center rounded-lg p-2 duration-300 bg-slate-100 hover:border-slate-600 focus:fill-blue-200 focus:bg-blue-400 border border-slate-200">

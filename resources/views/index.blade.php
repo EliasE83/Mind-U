@@ -2,7 +2,6 @@
 
 @section('content')
 
-
 {{-- Inicio de Div principal --}}
 <div class="flex w-full h-screen">  
 
