@@ -11,7 +11,11 @@
 </head>
 <body class="h-full" style="background-color: #FCF4D8;">
 
-    @yield('content')
+{{-- Nav --}}
+@include('partials.navbar')
+{{-- Fin Nav --}}
+
+@yield('content')
 
 </body>
 </html>

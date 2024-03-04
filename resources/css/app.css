@@ -112,9 +112,8 @@
 /* Estilos botón color */
 
 .wrapper {
-    position: absolute;
-    
-    transform: translate(-50%, -50%);
+    /* position: absolute;
+    transform: translate(-50%, -50%); */
     width: 60px;
     height: 60px;
     --black: #000000;

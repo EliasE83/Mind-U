@@ -2,9 +2,6 @@
 
 @section('content')
 
-{{-- Nav --}}
-@include('partials.navbar')
-{{-- Fin Nav --}}
 
 {{-- Inicio de Div principal --}}
 <div class="flex w-full h-screen">  
@@ -15,15 +12,15 @@
   {{-- Fin  Div del menú --}}
 
   {{-- Inicio de Div del personaje  --}}
-    <div class="flex items-center justify-center mx-auto my-auto">
-      <img src="{{ asset('images/neco.png')}}" class="justify-center w-auto h-auto" alt="Neco">
+    <div class="flex items-center justify-center w-1/3">
+      <img src="{{ asset('images/neco.png')}}" alt="Neco">
     </div>
   {{-- Fin de Div del personaje --}}
 
   {{-- Inicio de Div de los colores y chatbot --}}
-      <div class="flex flex-col ">
+      <div class="flex flex-col items-center w-1/3 ">
         {{-- Circulo principal --}}
-        <div class="mx-auto my-auto">
+        <div class="my-auto">
           <form action="">          
             <div class="wrapper">
 
@@ -79,7 +76,7 @@
         </div>
         {{-- Circulo principal --}}
         {{-- Chat Bot --}}
-        <div class="bg-white border border-slate-200 grid grid-cols-6 gap-2 rounded-xl p-2 text-sm mx-12 my-auto">
+        <div class="bg-white border border-slate-200 grid grid-cols-6 gap-2 rounded-xl p-2 text-sm my-auto">
             <h1 class="text-center text-slate-200 text-xl font-bold col-span-6">Enviar Mensaje</h1>
             <textarea placeholder="Tus sentimientos..." class="bg-slate-100 text-slate-600 h-28 placeholder:text-slate-600 placeholder:opacity-50 border border-slate-200 col-span-6 resize-none outline-none rounded-lg p-2 duration-300 focus:border-slate-600"></textarea>
             <button class="fill-slate-600 col-span-1 flex justify-center items-center rounded-lg p-2 duration-300 bg-slate-100 hover:border-slate-600 focus:fill-blue-200 focus:bg-blue-400 border border-slate-200">
