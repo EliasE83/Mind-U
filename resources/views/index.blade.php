@@ -1,5 +1,10 @@
 @extends('layouts.template')
 
+{{-- Nav --}}
+@include('partials.navbar')
+{{-- Fin Nav --}}
+
+
 @section('content')
 
 {{-- Inicio de Div principal --}}

@@ -320,3 +320,49 @@
   
 
 /* Fin estilos botón color */
+
+/* Estilos del personaje */
+
+#stickman {
+        position: relative;
+        width: 200px;
+        height: 300px;
+    }
+
+    .stick {
+        position: absolute;
+        background-color: black;
+    }
+
+    .head {
+        top: 20px;
+        left: 80px;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+    }
+
+    .body {
+        top: 60px;
+        left: 100px;
+        width: 20px;
+        height: 100px;
+    }
+
+    .left-arm {
+        top: 70px;
+        left: 80px;
+        width: 50px;
+        height: 20px;
+        transform-origin: bottom right;
+        transform: rotate(45deg);
+    }
+
+    .right-arm {
+        top: 70px;
+        left: 130px;
+        width: 50px;
+        height: 20px;
+        transform-origin: bottom left;
+        transform: rotate(-45deg);
+    }
