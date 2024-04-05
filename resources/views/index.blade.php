@@ -22,8 +22,13 @@
   {{-- Fin de Div del personaje --}}
 
   {{-- Inicio de Div de los colores y chatbot --}}
+  <div class="flex flex-col items-center w-1/3 ">
     @component('components.colores')      
-    @endcomponent             
+    @endcomponent   
+    
+    @component('components.chatbot')
+    @endcomponent
+  </div>
   {{-- Fin de Div de los colores y chatbot --}}  
 
 </div>
