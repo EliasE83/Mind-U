@@ -15,7 +15,7 @@
             </p>
                         
             <div class="flex flex-col items-center justify-center">
-                <form action="/prueba">
+                <form action="/index">
 
                     <p class="text-2xl">
                         Ingresa tu usuario y contraseña para ingresar

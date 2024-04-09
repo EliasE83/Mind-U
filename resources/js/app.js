@@ -44,3 +44,11 @@ document.addEventListener('DOMContentLoaded', function (){
     });
 });
 
+document.getElementById("inicio").addEventListener("click", function() {
+    window.location.href = "/index";
+});
+
+document.getElementById("cerrar").addEventListener("click", function() {
+    window.location.href = "/";
+});
+
