@@ -1,0 +1,30 @@
+.container  {
+    max-width: 600px;
+    width: 100%;
+    padding: 20px;
+    border: 1px solid rgba(89, 170, 245, 0.5);
+    border-radius: 100px;
+    background-color: rgba(89, 170, 245, 0.5);
+  }
+  .btn{
+      background-color: #03BB85;
+      border: #03BB85;
+  }
+  .cancelar{
+      background-color: #FF0000;
+      border: #FF0000;
+  }
+  .texto {
+      background-color: #59AAF5;
+      padding: 20px;
+      border-radius: 100px;
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+  }
+  .text{
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+      font-size: large;
+  }
+  .form-control{
+      border-radius:100px ;
+  }

@@ -8,10 +8,15 @@
     @vite('resources/css/app.css')
     @vite('resources/js/app.js')
     <link rel="icon" href="{{asset('images/logo.png')}}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    @stack('head')
 </head>
 <body class="h-full" style="background-color: #FCF4D8;">
 
-
+{{-- Nav --}}
+@include('partials.navbar')
+{{-- Fin Nav --}}
 
 @yield('content')
 
