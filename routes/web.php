@@ -14,8 +14,21 @@ use App\Http\Controllers\LoginController;
 |
 */
 
-Route::get('/', [LoginController::class, 'login'])->name('login');
+Route::get('/', function () {
+    return view('start');
+});
+
+Route::get('/login', [LoginController::class, 'login'])->name('login');
+
+Route::get('/nuevaContra', function () {
+    return view('nuevacontra');
+});
+
+Route::get('/registro', function () {
+    return view('registro');
+});
 
 Route::get('/index', function () {
     return view('index');
 });
+

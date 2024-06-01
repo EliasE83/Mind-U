@@ -1,45 +1,48 @@
 @extends('layouts.template')
 
+@push('head')
+@vite('resources/css/login.css')
+<link rel="icon" href="{{asset('images/Logo_Mind_U.jpeg')}}">
+<link rel="icon" href="{{asset('images/Perfil.jpg')}}">
+@endpush
+
 @section('content')
 
+<div class="flex w-full h-screen items-center justify-center">  
 
-<div class="flex  w-full h-screen items-center justify-center">
-    <div class="flex flex-col items-center justify-center">
 
-        <img src="{{asset('images/logo.png')}}" alt="" class="h-auto w-auto">
+    <form class="container" action="/index">
+        <div class="text-center"><h1><strong>INICIO DE SESIÓN</strong></h1></div>
 
-        <div class="flex flex-col items-center justify-center">                      
-
-            <p class="text-2xl">
-                Bienvenido a Mind U, la plataforma integral para la salud mental.
-            </p>
-                        
-            <div class="flex flex-col items-center justify-center">
-                <form action="/index">
-
-                    <p class="text-2xl">
-                        Ingresa tu usuario y contraseña para ingresar
-                    </p>
-                                
-                            
-                    <div class="flex flex-col items-center mt-5">
-                        <label for="username" class="mb-1"><b>Usuario</b></label>
-                        <input type="text" class="w-52 h-10 border-2 border-black rounded-lg px-2" placeholder="Escribe aquí..." id="username" required>
-                    </div>
-                            
-                    <div class="flex flex-col items-center mt-5">
-                        <label for="password" class="mb-1"><b>Contraseña</b></label>
-                        <input type="password" class="w-52 h-10 border-2 border-black rounded-lg px-2" placeholder="Escribe aquí..." id="password" required>
-                    </div>                                
-                                
-                    <div class="flex items-center justify-center mt-5">
-                        <button type="submit" class="h-10 w-52 bg-fondo text-white rounded-lg">Enviar</button>
-                    </div>  
-                            
-                </form>                                                 
-            </div>
+        <div class="mb-3 flex justify-center">
+        <img src="{{asset('images/Perfil.jpg')}}" alt="Imagen de Perfil" class="img-fluid rounded-circle perfil-img">
         </div>
-    </div>
+
+        <div class="mb-3 text-center">
+        <label for="nombre" class="texto form-label"><strong>Usuario</strong></label>
+        <input type="text" class="form-control" id="nombre" required>
+        </div>
+
+        <div class="mb-3 text-center">
+        <label for="contraseña" class="texto form-label"><strong>Contraseña</strong></label>
+        <input type="password" class="form-control" id="contraseña" required>
+        </div>
+        
+        <div class="mt-3 text-center">
+        <button type="submit" class="btn btn-primary btn-block"><strong>Ingresar</strong></button>
+        </div>
+
+        <div class="mt-3 text-center">
+        <a href="/nuevaContra">¿Olvidé mi contraseña?</a>
+        </div>
+
+        <div class="mt-3 text-center">
+        <a href="/registro">¿No tienes cuenta?, registrate</a>
+        </div>
+
+    </form>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
 </div>
 
 @endsection
