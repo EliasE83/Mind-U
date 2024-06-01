@@ -32,3 +32,18 @@ Route::get('/index', function () {
     return view('index');
 });
 
+Route::get('/cuenta', function () {
+    return view('menu/cuenta');
+});
+
+Route::get('/seguimiento', function () {
+    return view('menu/seguimiento');
+});
+
+Route::get('/meditacion', function () {
+    return view('menu/meditacion');
+});
+
+Route::get('/comunidad', function () {
+    return view('menu/comunidad');
+});

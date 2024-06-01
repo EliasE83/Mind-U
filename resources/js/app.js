@@ -48,6 +48,22 @@ document.getElementById("inicio").addEventListener("click", function() {
     window.location.href = "/index";
 });
 
+document.getElementById("cuenta").addEventListener("click", function() {
+    window.location.href = "/cuenta";
+});
+
+document.getElementById("seguimiento").addEventListener("click", function() {
+    window.location.href = "/seguimiento";
+});
+
+document.getElementById("meditacion").addEventListener("click", function() {
+    window.location.href = "/meditacion";
+});
+
+document.getElementById("comunidad").addEventListener("click", function() {
+    window.location.href = "/comunidad";
+});
+
 document.getElementById("cerrar").addEventListener("click", function() {
     window.location.href = "/";
 });
