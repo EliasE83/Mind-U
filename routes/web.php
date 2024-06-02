@@ -47,3 +47,7 @@ Route::get('/meditacion', function () {
 Route::get('/comunidad', function () {
     return view('menu/comunidad');
 });
+
+Route::get('/contacto', function () {
+    return view('menu/contacto');
+});
