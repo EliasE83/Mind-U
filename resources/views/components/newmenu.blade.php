@@ -2,7 +2,7 @@
 @vite('resources/css/newmenu.css')
 @endpush
 
-<div class="flex flex-col my-32 items-center w-1/3 ">
+<div class="flex flex-col my-36 items-center w-1/3 ">
   <div class="menu-btn y-24">
       <label for="" id="boton" class="circle2 justify-center items-center">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12">
