@@ -1,12 +1,11 @@
 <div class="flex flex-col items-center w-1/3 ">
 
-    <div class="menu-btn my-24">
+    <div class="menu-btn">
       <label for="" id="boton" class="circle2 justify-center items-center">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12">
           <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16m-7 6h7" />
         </svg>
       </label>
-
     </div>
 
   
@@ -53,7 +52,7 @@
           <path stroke-linecap="round" stroke-linejoin="round" d="M5.636 5.636a9 9 0 1 0 12.728 0M12 3v9" />
         </svg>      
           Cerrar sesión
-        </button>
+      </button>
         
   </div>
   

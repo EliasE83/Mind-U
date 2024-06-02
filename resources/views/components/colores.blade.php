@@ -30,9 +30,9 @@
               <label for="sub4" style="background-color:#00d6a0"></label>
             </button>
 
-            <button class="sub-circle" onclick="cambiarColor('#00e5db')">
-              <input value="#00e5db" name="sub-circle" type="radio" id="sub" class="hidden-sub-trigger">
-              <label for="sub5" style="background-color:#00e5db"></label>
+            <button class="sub-circle" onclick="cambiarColor('#212121')">
+              <input value="#212121" name="sub-circle" type="radio" id="sub" class="hidden-sub-trigger">
+              <label for="sub5" style="background-color:#212121"></label>
             </button>
 
             <button class="sub-circle" onclick="cambiarColor('#b37b92')">

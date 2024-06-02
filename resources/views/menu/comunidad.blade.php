@@ -6,8 +6,8 @@
 <div class="flex w-full h-screen">  
 
 {{-- Div del menú --}}
-@component('components.menu')      
-@endcomponent    
+    @component('components.newmenu')
+    @endcomponent
 {{-- Fin  Div del menú --}}
 
 
