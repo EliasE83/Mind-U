@@ -13,7 +13,8 @@
 
     <div class="flex flex-auto items-center justify-center">
 
-        <h1 class="text-4xl font-bold text-center">AQUÍ VA EL CONTENIDO</h1>
+        {{-- <h1 class="text-4xl font-bold text-center">AQUÍ VA EL CONTENIDO</h1> --}}
+        
 {{-- Div Inicio de botones--}}
         <div class="container mx-auto px-4">
             <div class="flex justify-between items-center">
