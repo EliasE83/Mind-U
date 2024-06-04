@@ -6,7 +6,12 @@ export default {
     "./resources/**/*.vue",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        // ... Agregar colores personalizados
+        fondo: '#CB6DF0'
+      }
+    },
   },
   plugins: [
     // ... Plugin para formularios de tailwind

@@ -1,0 +1,25 @@
+.container  {
+    max-width: 600px;
+    width: 100%;
+    padding: 20px;
+    border: 1px solid rgba(93, 193, 185, 0.7);
+    border-radius: 100px;
+    background-color: rgba(93, 193, 185, 0.461);
+  }
+
+  .perfil-img {
+    max-width: 150px;
+    border: 8px solid #5DC1B9 ; 
+    border-radius: 50%;
+  }
+  .btn{
+      background-color: #03BB85;
+      border: #03BB85;
+  }
+  .texto{
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+      font-size: large;
+  }
+  .text-center h1{
+      text-shadow:2px 2px 4px rgba(0,0,0,0.5) ;
+  }
