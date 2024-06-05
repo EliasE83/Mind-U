@@ -1,18 +1,15 @@
 @extends('layouts.template')
 
-{{-- Nav --}}
-@include('partials.navbar')
-{{-- Fin Nav --}}
-
-
 @section('content')
 
 {{-- Inicio de Div principal --}}
 <div class="flex w-full h-screen">  
 
   {{-- Div del menú --}}
-    @component('components.menu')      
-    @endcomponent    
+    {{-- @component('components.menu')      
+    @endcomponent --}}
+    @component('components.newmenu')
+    @endcomponent
   {{-- Fin  Div del menú --}}
 
   {{-- Inicio de Div del personaje  --}}

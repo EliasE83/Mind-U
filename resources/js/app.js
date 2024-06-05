@@ -3,7 +3,7 @@ import './bootstrap';
 /* Funcion para el menú */
 document.addEventListener('DOMContentLoaded', function() {
     const menuBtn = document.getElementById('boton');
-    const menu = document.querySelector('.menu');
+    const menu = document.querySelector('.cards');
     const div = document.querySelector('.menu-btn');
 
     menuBtn.addEventListener('click', function() {
@@ -22,30 +22,54 @@ document.addEventListener('DOMContentLoaded', function() {
 
 /* Funcion para cambiar fondo */
 
-document.addEventListener('DOMContentLoaded', function (){
+document.addEventListener('DOMContentLoaded', function () {
 
+    // Función para cambiar el color de fondo
     function cambiarColor(color) {
         const body = document.querySelector('body');
-        const colorFondo = color;
-        body.style.backgroundColor = colorFondo;
+        body.style.backgroundColor = color;
     }
 
-    // Obtén todos los botones con la clase "sub-circle"
+    // Recuperar el color almacenado en localStorage cuando la página se carga
+    const colorAlmacenado = localStorage.getItem('colorFondo');
+    if (colorAlmacenado) {
+        cambiarColor(colorAlmacenado);
+    }
+
+    // Obtener todos los botones con la clase "sub-circle"
     const botones = document.querySelectorAll('.sub-circle');
     
-    // Itera sobre cada botón y agrega un controlador de eventos clic
+    // Iterar sobre cada botón y agregar un controlador de eventos clic
     botones.forEach(function(boton) {
         boton.addEventListener('click', function() {
-            // Obtén el color del botón
+            // Obtener el color del botón
             const color = this.querySelector('input').value;
-            // Llama a la función cambiarColor con el color obtenido
+            // Llamar a la función cambiarColor con el color obtenido
             cambiarColor(color);
+            // Guardar el color seleccionado en localStorage
+            localStorage.setItem('colorFondo', color);
         });
     });
 });
 
 document.getElementById("inicio").addEventListener("click", function() {
     window.location.href = "/index";
+});
+
+document.getElementById("cuenta").addEventListener("click", function() {
+    window.location.href = "/cuenta";
+});
+
+document.getElementById("seguimiento").addEventListener("click", function() {
+    window.location.href = "/seguimiento";
+});
+
+document.getElementById("meditacion").addEventListener("click", function() {
+    window.location.href = "/meditacion";
+});
+
+document.getElementById("comunidad").addEventListener("click", function() {
+    window.location.href = "/comunidad";
 });
 
 document.getElementById("cerrar").addEventListener("click", function() {
