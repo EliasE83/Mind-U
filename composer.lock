@@ -3315,6 +3315,7 @@
             "description": "Converts CSS selectors to XPath expressions",
             "homepage": "https://symfony.com",
             "support": {
+
                 "source": "https://github.com/symfony/css-selector/tree/v7.1.1"
             },
             "funding": [
@@ -4774,6 +4775,7 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/process/zipball/8d92dd79149f29e89ee0f480254db595f6a6a2c5",
                 "reference": "8d92dd79149f29e89ee0f480254db595f6a6a2c5",
+
                 "shasum": ""
             },
             "require": {
