@@ -51,3 +51,7 @@ Route::get('/comunidad', function () {
 Route::get('/contacto', function () {
     return view('menu/contacto');
 });
+
+Route::get('/comunidad2', function () {
+    return view('menu/meditacion2');
+});

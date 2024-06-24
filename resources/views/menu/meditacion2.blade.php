@@ -30,7 +30,7 @@
 
               <!-- Imagen central -->
               <div class="flex justify-center">
-                <img src="https://via.placeholder.com/400" alt="Imagen central" class="rounded-lg shadow-lg">
+                <img src="{{ asset('images/neco.png')}}" alt="Imagen central">
               </div>
               <!-- Fin Imagen central -->
 
