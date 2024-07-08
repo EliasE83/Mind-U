@@ -2,63 +2,53 @@
 
 @section('content')
 
-{{-- Inicio de Div principal --}}
 <div class="flex w-full h-screen">
-
-{{-- Div del menú --}}
     @component('components.newmenu')
     @endcomponent
-{{-- Fin  Div del menú --}}
 
-
-    <div class="flex flex-auto items-center justify-center">
-
-    <div class="container-fluid">
-    <div class="row">
-        <div class="col-md-4">
-            <div class="card">
-                <div class="card-header">Grupos</div>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item d-flex justify-content-between align-items-center" data-group="1">
-                        Group 1
-                        <span class="badge badge-primary badge-pill">Mensaje</span>
-                    </li>
-                    <li class="list-group-item d-flex justify-content-between align-items-center" data-group="2">
-                        Group 2
-                        <span class="badge badge-secondary badge-pill">27 nov</span>
-                    </li>
-                    <li class="list-group-item d-flex justify-content-between align-items-center" data-group="3">
-                        Group 3
-                        <span class="badge badge-secondary badge-pill">Mensaje</span>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header d-flex justify-content-between align-items-center">
-                    <span id="groupName">Grupo 1</span>
-                    <span id="groupStatus">Activo hace 2 minutos</span>
-                </div>
-                <div class="card-body">
-                    <div id="messages" class="messages">
-                        <!-- Los mensajes se cargarán dinámicamente aquí -->
+    <div class="flex flex-auto items-center justify-center p-4">
+        <div class="bg-purple-200 rounded-3xl p-6 w-11/12 max-w-4xl">
+            <div class="flex flex-col md:flex-row w-full space-y-4 md:space-y-0 md:space-x-4">
+                <div class="w-full md:w-1/3">
+                    <div class="bg-purple-400 rounded-3xl p-6">
+                        <h2 class="text-2xl font-semibold mb-4 text-center text-purple-800">Grupos</h2>
+                        <ul class="list-none p-0 space-y-2">
+                            <li class="bg-purple-300 rounded-3xl p-2 flex justify-between items-center cursor-pointer" data-group="1">
+                                Group 1
+                                <span class="bg-teal-500 text-white rounded-full px-3 py-1 text-sm">Mensaje</span>
+                            </li>
+                            <li class="bg-purple-300 rounded-3xl p-2 flex justify-between items-center cursor-pointer" data-group="2">
+                                Group 2
+                                <span class="bg-teal-500 text-white rounded-full px-3 py-1 text-sm">27 nov</span>
+                            </li>
+                            <li class="bg-purple-300 rounded-3xl p-2 flex justify-between items-center cursor-pointer" data-group="3">
+                                Group 3
+                                <span class="bg-teal-500 text-white rounded-full px-3 py-1 text-sm">Mensaje</span>
+                            </li>
+                        </ul>
                     </div>
-                    <form class="mt-3">
-                        <div class="input-group">
-                            <input type="text" class="form-control" placeholder="Escribe tu mensaje aquí">
-                            <div class="input-group-append">
-                                <button class="btn btn-primary" type="submit">Enviar</button>
-                            </div>
+                </div>
+                <div class="w-full md:w-2/3">
+                    <div class="bg-purple-400 rounded-3xl p-6">
+                        <div class="flex justify-between items-center mb-4">
+                            <h2 id="groupName" class="text-2xl font-semibold text-purple-800">Grupo 1</h2>
+                            <span id="groupStatus" class="text-purple-600">Activo hace 2 minutos</span>
                         </div>
-                    </form>
+                        <div id="messages" class="bg-white rounded-3xl p-6 mb-4 h-64 overflow-y-auto">
+                            <!-- Messages will be loaded dynamically here -->
+                        </div>
+                        <form id="messageForm" class="flex">
+                            <input type="text" id="messageInput" class="form-control flex-grow rounded-3xl py-2 px-4 mr-2" placeholder="Escribe tu mensaje aquí">
+                            <button class="bg-teal-500 text-white rounded-3xl py-2 px-4" type="submit">Enviar</button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
 <script>
-    // Datos de ejemplo para los grupos y mensajes
     const groups = [
         { id: 1, name: 'Group 1', status: 'Activo hace 2 minutos' },
         { id: 2, name: 'Group 2', status: 'Activo hace 15 minutos' },
@@ -81,7 +71,6 @@
         ]
     };
 
-    // Función para cargar los mensajes de un grupo
     function loadMessages(groupId) {
         const messagesContainer = document.getElementById('messages');
         messagesContainer.innerHTML = '';
@@ -89,17 +78,22 @@
         const groupMessages = messages[groupId];
         groupMessages.forEach(message => {
             const messageElement = document.createElement('div');
-            messageElement.classList.add('message');
+            messageElement.classList.add('message', 'bg-purple-200', 'rounded-3xl', 'p-2', 'mb-2');
             messageElement.innerHTML = `
-                <strong>${message.user}:</strong>
-                <span>${message.content}</span>
-                <small class="text-muted">${message.time}</small>
+                <div class="flex items-center">
+                    <div class="w-8 h-8 bg-purple-500 rounded-full mr-2"></div>
+                    <div>
+                        <strong>${message.user}</strong>
+                        <small class="text-purple-600 ml-2">${message.time}</small>
+                    </div>
+                </div>
+                <p class="mt-1">${message.content}</p>
             `;
             messagesContainer.appendChild(messageElement);
         });
+        messagesContainer.scrollTop = messagesContainer.scrollHeight;
     }
 
-    // Función para cambiar de grupo
     function changeGroup(groupId) {
         const group = groups.find(group => group.id === groupId);
         document.getElementById('groupName').textContent = group.name;
@@ -107,24 +101,68 @@
         loadMessages(groupId);
     }
 
-    // Agregar evento de clic a los elementos de la lista de grupos
-    const groupItems = document.querySelectorAll('.list-group-item');
-    groupItems.forEach(item => {
+    document.querySelectorAll('[data-group]').forEach(item => {
         item.addEventListener('click', () => {
             const groupId = parseInt(item.dataset.group);
             changeGroup(groupId);
         });
     });
 
-    // Cargar los mensajes del primer grupo al cargar la página
+    document.getElementById('messageForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const messageInput = document.getElementById('messageInput');
+        const message = messageInput.value.trim();
+        if (message) {
+            sendMessage(message);
+            messageInput.value = '';
+        }
+    });
+
+    function sendMessage(message) {
+        // Placeholder for sending message to server
+        console.log('Sending message:', message);
+        // After sending, you would typically receive a response from the server
+        // and then call a function to add the new message to the UI
+        addMessageToUI({
+            user: 'You',
+            content: message,
+            time: new Date().toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})
+        });
+    }
+
+    function addMessageToUI(message) {
+        const messagesContainer = document.getElementById('messages');
+        const messageElement = document.createElement('div');
+        messageElement.classList.add('message', 'bg-purple-200', 'rounded-3xl', 'p-2', 'mb-2');
+        messageElement.innerHTML = `
+            <div class="flex items-center">
+                <div class="w-8 h-8 bg-purple-500 rounded-full mr-2"></div>
+                <div>
+                    <strong>${message.user}</strong>
+                    <small class="text-purple-600 ml-2">${message.time}</small>
+                </div>
+            </div>
+            <p class="mt-1">${message.content}</p>
+        `;
+        messagesContainer.appendChild(messageElement);
+        messagesContainer.scrollTop = messagesContainer.scrollHeight;
+    }
+
+    // Function to simulate receiving a new message (for demo purposes)
+    function simulateNewMessage() {
+        const newMessage = {
+            user: 'User ' + Math.floor(Math.random() * 10),
+            content: 'This is a simulated new message.',
+            time: new Date().toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})
+        };
+        addMessageToUI(newMessage);
+    }
+
+    // Simulate receiving a new message every 10 seconds (for demo purposes)
+    setInterval(simulateNewMessage, 10000);
+
+    // Load initial group
     changeGroup(1);
 </script>
-    </div>
-
-</div>
-{{-- Fin de Div principal --}}
-
-{{-- Footer --}}
-{{-- Fin Footer --}}
 
 @endsection
