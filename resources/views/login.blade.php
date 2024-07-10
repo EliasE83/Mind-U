@@ -11,7 +11,8 @@
 <div class="flex w-full h-screen items-center justify-center">  
 
 
-    <form class="container" action="/index">
+    <form class="container" action="{{ route('login.store') }}" method="POST">
+        @csrf
         <div class="text-center"><h1><strong>INICIO DE SESIÓN</strong></h1></div>
 
         <div class="mb-3 flex justify-center">
@@ -20,12 +21,12 @@
 
         <div class="mb-3 text-center">
         <label for="nombre" class="texto form-label"><strong>Usuario</strong></label>
-        <input type="text" class="form-control" id="nombre" required>
+        <input type="text" class="form-control" name="nombre" required>
         </div>
 
         <div class="mb-3 text-center">
         <label for="contraseña" class="texto form-label"><strong>Contraseña</strong></label>
-        <input type="password" class="form-control" id="contraseña" required>
+        <input type="password" class="form-control" name="contrasena" required>
         </div>
         
         <div class="mt-3 text-center">

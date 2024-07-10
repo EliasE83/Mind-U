@@ -76,6 +76,6 @@ document.getElementById("contacto").addEventListener("click", function() {
 });
 
 document.getElementById("cerrar").addEventListener("click", function() {
-    window.location.href = "/";
+    window.location.href = "/logout";
 });
 
