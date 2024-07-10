@@ -71,6 +71,9 @@ document.getElementById("meditacion").addEventListener("click", function() {
 document.getElementById("comunidad").addEventListener("click", function() {
     window.location.href = "/comunidad";
 });
+document.getElementById("contacto").addEventListener("click", function() {
+    window.location.href = "/contacto";
+});
 
 document.getElementById("cerrar").addEventListener("click", function() {
     window.location.href = "/";
