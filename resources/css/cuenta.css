@@ -1,10 +1,4 @@
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  }
-  form {
+  .form1 {
     max-width: 400px;
     width: 100%;
     padding: 20px;
@@ -17,17 +11,17 @@ body {
     border: 8px solid rgba(93, 193, 185, 0.7);
     border-radius: 50%;
   }
-  .form-check-label {
+  .form1-check-label {
       font-size: smaller;
   }
-  .form-check-input {
+  .form1-check-input {
       position: relative;
       width: 40px;
       height: 20px;
       background-color: #ccc; 
       border-radius: 10px; 
   }
-  .form-check-input::before {
+  .form1-check-input::before {
       content: "V";
       position: absolute;
       top: 50%;
@@ -36,11 +30,11 @@ body {
       font-size: 12px;
       color: white; 
   }
-  .form-check-input:checked::before {
+  .form1-check-input:checked::before {
       content: "A";
       left: auto; 
       right: 5px; 
   }
-  .form-check-input:checked {
+  .form1-check-input:checked {
       background-color: #007bff; 
   }
