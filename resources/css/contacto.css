@@ -7,6 +7,11 @@
   }
 }
 
+body {
+  font-family: 'Hind', sans-serif;
+  background: #f9f6f2;
+}
+
 .container {
   margin: 0 auto;
   padding: 4rem;
@@ -16,10 +21,13 @@
 
 .accordion {
   .accordion-item {
-    background-color: #D9DCFC;
-    border-bottom: 1px solid #ffffff;
+    background-color: #f7db87;
+    border-bottom: 1px solid #000000;
+    border-top: 1px solid #000000;
+    border-left: 1px solid #000000;
+    border-right: 1px solid #000000;
     button[aria-expanded='true'] {
-      border-bottom: 1px solid #ffffff;
+      border-bottom: 1px solid #000000;
     }
   }
   button {
@@ -28,7 +36,7 @@
     text-align: left;
     width: 100%;
     padding: 1em 0;
-    color: #7288a2;
+    color: #000000;
     font-size: 1.15rem;
     font-weight: 400;
     border: none;
@@ -36,11 +44,11 @@
     outline: none;
     &:hover, &:focus {
       cursor: pointer;
-      color: #666CA7;
+      color: #000000;
       &::after {
         cursor: pointer;
-        color: #666CA7;
-        border: 1px solid #666CA7;
+        color: #000000;
+        border: 1px solid #000000;
       }
     }
     .accordion-title {
@@ -78,7 +86,7 @@
     }
   }
   button[aria-expanded='true'] {
-    color: #666CA7;
+    color: #000000;
     .icon {
       &::after {
         width: 0;
@@ -105,94 +113,65 @@
   }
 }
 
-/* Forms */
-
-[type=text],
-[type=email],
-[type=url],
-select,
-textarea {
-  display: block;
-  padding: .5rem;
-  background: transparent;
-  vertical-align: middle;
-  width: 100%;
-  max-width: 100%;
-  border: 1px solid #666CA7;
-  border-radius: 4px;
-  font-size: .95rem;
+.bottom-section {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
 }
 
-[type=text]:focus,
-[type=email]:focus, 
-[type=url]:focus,
-select:focus,
-textarea:focus {
-  outline: none;
-  border: 1px solid #1E6BD6;
-} 
-
-select {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAJCAYAAAA/33wPAAAAvklEQVQoFY2QMQqEMBBFv7ERa/EMXkGw11K8QbDXzuN4BHv7QO6ifUgj7v4UAdlVM8Uwf+b9YZJISnlqrfEUZVlinucnBGKaJgghbiHOyLyFKIoCbdvecpyReYvo/Ma2bajrGtbaC58kCdZ1RZ7nl/4/4d5EsO/7nzl7IUtodBexMMagaRrs+06JLMvcNWmaOv2W/C/TMAyD58dxROgSmvxFFMdxoOs6lliWBXEcuzokXRbRoJRyvqqqQvye+QDMDz1D6yuj9wAAAABJRU5ErkJggg==) 100% no-repeat;
-  line-height: 1
-}
-
-label {
-  font-weight: 600;
-  font-size: .9rem;
-  display: block;
-  margin: .5rem 0;
-}
-
-/* Other */
-
-* { box-sizing: border-box; }
-
-html {
-  -webkit-font-smoothing: antialiased;
+.nueva-pregunta, .contactanos {
+  flex: 1;
   padding: 1rem;
+  border-radius: 10px;
 }
 
-.container-forms {
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 0 1rem;
-  background-color: #D9DCFC;
-
-  align-self: flex-start;
-}
-
-.container-contact {
-  max-width: 600px;
-  margin: 0 auto;
-  margin-top: 2rem; /* Añadir espacio entre el acordeón y el formulario */
-  align-self: flex-end;
-}
-
-.card {
-
-  background-color: #D9DCFC;
-
-}
-
-/* Button */
-
-[type=submit] {
-  display: inline-block;
-  vertical-align: middle;
-  white-space: nowrap;
-  cursor: pointer;
-  margin: .25rem 0;
-  padding: .5rem 1rem;
-  border: 1px solid #1E6BD6;
-  border-radius: 18px;
-  background: #1E6BD6;
+.nueva-pregunta {
+  background-color: #2f5597;
   color: white;
-  font-weight: 600;
-  text-decoration: none;
-  font-family: sans-serif;
-  font-size: .95rem;
+}
+
+.nueva-pregunta, .contactanos {
+  flex: 1;
+  max-width: calc(50% - 10px); /* Asegura que cada sección ocupe la mitad del espacio menos la mitad del gap */
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.contactanos {
+  background-color: #ffd1dc;
+  position: relative;
+  text-align: center;
+}
+
+.franja {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: #ffb6c1;
+}
+
+.contacto-contenido p {
+  margin: 0.5em 0;
+  position: relative;
+  z-index: 1;
+  background-color: #ffd1dc;
+  display: inline-block;
+  padding: 0 10px;
+}
+
+input[type="text"], button[type="submit"] {
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+button[type="submit"] {
+  background-color: #00b050;
+  color: white;
+  border: none;
+  cursor: pointer;
+
 }
 
