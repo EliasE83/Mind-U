@@ -3,7 +3,7 @@
 @section('content')
 
 {{-- Inicio de Div principal --}}
-<div class="flex w-full h-screen">  
+<div class="flex w-full h-screen">
 
 {{-- Div del menú --}}
 @component('components.newmenu')
@@ -27,7 +27,7 @@
             <button class="bg-teal-500 text-white rounded-3xl py-2 px-4 float-right">GUARDAR</button>
         </div>
     </div>
-   
+
 </div>
 {{-- Fin de Div principal --}}
 
@@ -52,11 +52,11 @@
         <button class="bg-purple-400 text-white rounded-3xl py-2 px-4 w-full mb-4" onclick="closeModal()">REGISTRAR EMOCIONES</button>
         <button class="bg-purple-400 text-white rounded-3xl py-2 px-4 w-full mb-4">MÁS PREGUNTAS...</button>
         <div class="flex items-center mb-4">
-            
+
         </div>
         <div class="flex justify-between">
             <button class="bg-teal-500 text-white rounded-3xl py-2 px-4" onclick="closeModal()">GUARDAR</button>
-            
+
         </div>
     </div>
 </div>
