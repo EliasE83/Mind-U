@@ -10,22 +10,23 @@
 
 <div class="flex w-full h-screen items-center justify-center">  
 
-        <form class="container" action="/">
+        <form class="container" method="POST" action="{{ route('registro.store') }}">
+            @csrf
             <div class="texto text-center">
                 <h1><strong>REGISTRO</strong></h1>
                 <h4><strong>BIENVENIDO</strong></h4>
             </div>
             <div class="mb-3">
-            <label for="nombre" class="text form-label"><strong>Nombre Completo</strong></label>
-            <input type="text" class="form-control" id="nombre" required>
+            <label for="nombre" class="text form-label"><strong>Correo Electrónico</strong></label>
+            <input type="text" class="form-control" name="correo" required>
             </div>
             <div class="mb-3">
             <label for="contraseña" class="text form-label"><strong>Contraseña</strong></label>
-            <input type="password" class="form-control" id="contraseña" required>
+            <input type="password" class="form-control" name="contrasena" required>
             </div>
             <div class="mb-3">
             <label for="usuario" class="text form-label"><strong>Nombre de Usuario</strong></label>
-            <input type="text" class="form-control" id="usuario" required>
+            <input type="text" class="form-control" name="usuario" required>
             </div>
             <div class="mt-3 text-center">
             

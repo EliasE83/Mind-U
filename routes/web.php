@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\RegistroUsuarioController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,36 +19,37 @@ Route::get('/', function () {
     return view('start');
 });
 
-Route::get('/login', [LoginController::class, 'login'])->name('login');
+Route::resource('login', LoginController::class);
+Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 
 Route::get('/nuevaContra', function () {
     return view('nuevacontra');
 });
 
-Route::get('/registro', function () {
-    return view('registro');
-});
+Route::resource('registro', RegistroUsuarioController::class);
 
-Route::get('/index', function () {
-    return view('index');
-});
+Route::middleware(['auth'])->group(function () {
+    Route::get('/index', function () {
+        return view('index');
+    });
 
-Route::get('/cuenta', function () {
-    return view('menu/cuenta');
-});
+    Route::get('/cuenta', function () {
+        return view('menu/cuenta');
+    });
 
-Route::get('/seguimiento', function () {
-    return view('menu/seguimiento');
-});
+    Route::get('/seguimiento', function () {
+        return view('menu/seguimiento');
+    });
 
-Route::get('/meditacion', function () {
-    return view('menu/meditacion');
-});
+    Route::get('/meditacion', function () {
+        return view('menu/meditacion');
+    });
 
-Route::get('/comunidad', function () {
-    return view('menu/comunidad');
-});
+    Route::get('/comunidad', function () {
+        return view('menu/comunidad');
+    });
 
-Route::get('/contacto', function () {
-    return view('menu/contacto');
+    Route::get('/contacto', function () {
+        return view('menu/contacto');
+    });
 });

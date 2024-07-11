@@ -24,7 +24,7 @@
                             
                 <div class="flex flex-col items-center justify-center">                                
                         <div class="flex items-center justify-center mt-5">
-                            <a href="/login">
+                            <a href="{{route('login.index')}}">
                                 <button type="submit" class="h-10 w-52 bg-fondo text-white rounded-lg">Empezar</button>
                             </a>
                         </div>                                      
