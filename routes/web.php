@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegistroUsuarioController;
+use App\Http\Controllers\SeguimientoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -37,9 +38,7 @@ Route::middleware(['auth'])->group(function () {
         return view('menu/cuenta');
     });
 
-    Route::get('/seguimiento', function () {
-        return view('menu/seguimiento');
-    });
+    Route::resource('seguimientos', SeguimientoController::class);
 
     Route::get('/meditacion', function () {
         return view('menu/meditacion');
